@@ -16,6 +16,17 @@ To create a backup to AWS S3:
 ```bash
 java -jar CloudBackupRestore.jar backup local-directory-name bucket-name::directory-name
 ```
-- local-directory-name: The path to the local directory you want to back up.
-- bucket-name::directory-name: The target bucket and directory path in the format
-  bucket-name::directory-name. If the bucket doesn't exist, it will be created.
+- `local-directory-name`: The path to the local directory you want to back up.
+- `bucket-name::directory-name`: The target bucket and directory path in the format
+- `bucket-name::directory-name`. If the bucket doesn't exist, it will be created.
+
+
+### Restore Operation
+
+To restore data from AWS S3:
+
+```bash
+java -jar CloudBackupRestore.jar restore bucket-name::directory-name local-directory-name
+```
+- `bucket-name::directory-name`: The name of the bucket and directory you want to restore from.
+- `local-directory-name`: The path to the local directory where you want to restore the data.
