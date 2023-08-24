@@ -30,3 +30,18 @@ java -jar CloudBackupRestore.jar restore bucket-name::directory-name local-direc
 ```
 - `bucket-name::directory-name`: The name of the bucket and directory you want to restore from.
 - `local-directory-name`: The path to the local directory where you want to restore the data.
+
+### Notes
+
+- This program utilizes the AWS SDK for Java to interact with AWS services.
+- During backup, the original directory structure is maintained in the S3 bucket.
+- During restore, the original directory structure is recreated in the local directory.
+
+### Disclaimer
+This program is provided as-is and may have limitations or security considerations. Make sure to review and adapt the code according to your specific requirements and security best practices.
+
+### License
+This project is licensed under the `MIT License`.
+
+## Important
+Please make sure to replace placeholders such as `local-directory-name`, `bucket-name`, and `CloudBackupRestore.jar` with actual values and filenames according to your project setup. Also, ensure that the AWS SDK for Java is properly configured and accessible on your machine.
